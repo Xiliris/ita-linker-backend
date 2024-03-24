@@ -1,4 +1,4 @@
-# Linker Backend Documentation
+# 💯 Linker Backend Documentation
 
 ## ❗️ Vazno: 
 - Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
@@ -7,11 +7,11 @@
 - Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
 - Na slack cete dobit .env file
 
-## Authorization
+## ▶️ Authorization
 - Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
 - u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
 
-## Auth Requests
+## ▶️ Auth Requests
 ### Registracija Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/register-fizickog-lica
@@ -104,7 +104,7 @@
 "newPassword": "String*"
 ```
 
-## Requestovi za Fizicko Lice (KorisnickoIme fizickog lica):
+## ▶️ Requestovi za Fizicko Lice (KorisnickoIme fizickog lica):
 ### Historija Saradnji:
 - Request Type: GET
 - Route: /api/fizicko/historija-saradnji/{korisnickoIme}
@@ -133,7 +133,7 @@
 "poruka": "String*"
 ```
 
-## Requestovi za Pravno Lice (KorisnickoIme pravnog lica):
+## ▶️ Requestovi za Pravno Lice (KorisnickoIme pravnog lica):
 ### Historija Saradnje:
 - Request Type: GET
 - Route: /api/pravno/historija-saradnje/{korisnickoIme}
@@ -149,11 +149,11 @@
 - Route: /api/pravno/pristigli-zahtjevi/{korisnickoIme}
 - Response: JSON
 
-## Logo:
+## ▶️ Logo:
 - (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
 - Sto bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
 
-## ❗️ Bugovi: 
+## ▶️ Bugovi: 
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
 - Account se moze napraviti na ne postojeci email. 
 - Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
