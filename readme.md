@@ -9,7 +9,7 @@
 - Request Type: POST
 - Route: /api/auth/register-fizickog-lica
 - Format: JSON
-- data: {
+- data: 
 ```json
 "ime": "String*",
 "prezime": "String*",
@@ -18,13 +18,12 @@
 "korisnickoIme": "String* (OVO MORA BITI JEDINSTVENO)",
 "password": "String*"
 ```
-}
 
 ### Registracija Pravnog Lica:
 - Request Type: POST
 - Route: /api/auth/register-pravnog-lica
 - Format: FORM-- DATA
-- data: {
+- data: 
 ```json
 "ime": "String*",
 "sjediste": "String*",
@@ -36,74 +35,67 @@
 "password": "String*",
 "logotip": "File",
 ```
-}
 
 ### Login Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/login-fizickog-lica
 - Format: JSON
-- data: {
+- data: 
 ```json
 "korisnickoIme": "String*",
 "password": "String*"
 ```
-}
 
 ### Login Pranvnog Lica:
 - Request Type: POST
 - Route: /api/auth/login-fizickog-lica
 - Format: JSON
-- data: {
+- data: 
 ```json
 "korisnickoIme": "String*",
 "password": "String*"
 ```
-}
 
 
 ### Nova Lozinka Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-novi-password
 - Format: JSON
-- data: {
+- data: 
 ```json
 "email": "String* (Mora biti validan Email)"
 ```
-}
 
 ### Nova Lozinka Pranovg Lica:
 - Request Type: POST
 - Route: /api/auth/pravno-lice-novi-password
 - Format: JSON
-- data: {
+- data: 
 ```json
 "email": "String* (Mora biti validan Email)"
 ```
-}
 
 ### Promjena Lozinke Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-promjena-passworda
 - Format: JSON
-- data: {
+- data: 
 ```json
 "email": "String*",
 "oldPassword": "String*",
 "newPassword": "String*"
 ```
-}
 
 ### Promjena Lozinke Pravnog Lica:
 - Request Type: POST
 - Route: /api/auth/pravno-lice-promjena-passworda
 - Format: JSON
-- data: {
+- data: 
 ```json
 "email": "String*",
 "oldPassword": "String*",
 "newPassword": "String*"
 ```
-}
 
 ## Requestovi za Fizicko Lice (KorisnickoIme fizickog lica):
 ### Historija Saradnji:
@@ -125,7 +117,7 @@
 - Request Type: POST
 - Route: /api/fizicko/posalji-zahtjev
 - Format: JSON
-- data: {
+- data: 
 ```json
 "emailPravnogLica": "String*",
 "emailFizickoLica": "String*",
@@ -133,7 +125,6 @@
 "kontaktFizickogLica": "String*",
 "poruka": "String*"
 ```
-}
 
 ## Requestovi za Pravno Lice (KorisnickoIme pravnog lica):
 ### Historija Saradnje:
