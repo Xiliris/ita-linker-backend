@@ -4,7 +4,7 @@
 - Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
 - u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
 
-##Auth Requests
+## Auth Requests
 ### Registracija Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/register-fizickog-lica
@@ -26,7 +26,7 @@ password: String*
 - Format: FORM-- DATA
 - data: {
 ```json
-ime: String*,
+ime: String,
 sjediste: String*,
 telefon: String*,
 IDBroj: String*,
@@ -142,7 +142,7 @@ poruka: String*
 - Response: JSON
 
 ### Najprofitabilniji Klijenti:
-Reqeust Type: GET,
+- Reqeust Type: GET,
 - Route: /api/pravno/najprofitabilniji-klijenti/{korisnickoIme}
 - Response: JSON
 
@@ -154,12 +154,12 @@ Reqeust Type: GET,
 ## Logo:
 - (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
 
-##Vazno: 
+## Vazno: 
 - Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
 - Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.e 
 - Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
 
-##Bugovi: 
+## Bugovi: 
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
 - Account se moze napraviti na ne postojeci email. 
 - Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
