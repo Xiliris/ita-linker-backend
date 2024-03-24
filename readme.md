@@ -160,3 +160,15 @@
 - Email za novi pasword nema nikakav design. 
 - Response message ne posjeduje slova š,đ,ž,č,ć. 
 - Vjerovatno ima dosta nekonzistentnog pisanja u responsu.
+
+## ❓ Nedovrseno ❓
+### 👉🏼 Route: 
+- Odgovori Zahtjevu.
+
+### 👉🏼Logika
+- 👉🏼 Pravno Lice:
+- Historija Saradnji
+- Klijenti
+- 👉🏼 Fizicko Lice
+- Ponude
+- Historija Saradnji
