@@ -2,7 +2,7 @@
 
 ## Authorization
 - Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
-- u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
+- U headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
 
 ## Auth Requests
 ### Registracija Fizickog Lica:
