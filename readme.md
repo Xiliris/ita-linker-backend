@@ -1,18 +1,18 @@
 # 💯 Linker Backend Documentation 💯
 
 ## ❗️ Vazno: ❗️ 
-- Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
-- Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.
-- Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
-- Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
-- Na slack cete dobit .env file
+- Ovo je prva verzija backenda pa je očekivano da će biti dosta BUGOVA, ukoliko naiđete na neki, prijavite mi na Slack i molim vas da budete strpljivi. :)
+- Ukoliko ima nekih nejasnoća s dokumentacijom, obratite mi se na Slack.
+- Dosta stvari sam promijenio u zadnji trenutak pa ako nešto bude pokvareno, prijavite mi na Slack.
+- Simbol * pored neke riječi "pretežno String" znači da je field obavezno popuniti.
+- Na Slacku ćete dobiti .env datoteku.
 
 ## ▶️ Authorization ◀️
-- Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
-- u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
+- Kako ne bi mogao svatko poslati zahtjev i mijenjati podatke u našoj bazi podataka, postavio sam autorizacijski token koji se mora poslati s svakim zahtjevom.
+- U zaglavljima postavite token koji ćete dobiti na Slacku. Bez tog tokena dobit ćete grešku "Missing token."
 
 ## ▶️ Auth Requests ◀️
-### 👉🏼 Registracija Fizickog Lica:
+### 👉🏼 Registracija Fičickog Lica:
 - Request Type: POST
 - Route: /api/auth/register-fizickog-lica
 - Format: JSON
@@ -43,7 +43,7 @@
 "logotip": "File",
 ```
 
-### 👉🏼 Login Fizickog Lica:
+### 👉🏼 Login Fizičkog Lica:
 - Request Type: POST
 - Route: /api/auth/login-fizickog-lica
 - Format: JSON
@@ -64,7 +64,7 @@
 ```
 
 
-### 👉🏼 Nova Lozinka Fizickog Lica:
+### 👉🏼 Nova Lozinka Fičickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-novi-password
 - Format: JSON
@@ -82,7 +82,7 @@
 "email": "String* (Mora biti validan Email)"
 ```
 
-### 👉🏼 Promjena Lozinke Fizickog Lica:
+### 👉🏼 Promjena Lozinke Fičickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-promjena-passworda
 - Format: JSON
@@ -104,7 +104,7 @@
 "newPassword": "String*"
 ```
 
-## ▶️ Requestovi za Fizicko Lice (KorisnickoIme fizickog lica): ◀️
+## ▶️ Requestovi za Fizičko Lice (KorisnickoIme fizickog lica): ◀️
 ### 👉🏼 Historija Saradnji:
 - Request Type: GET
 - Route: /api/fizicko/historija-saradnji/{korisnickoIme}
@@ -120,7 +120,7 @@
 - Route: /api/fizicko/pristigle-ponude/{korisnickoIme}
 - Response: JSON
 
-### 👉🏼 Posalji Zahtjev:
+### 👉🏼 Pošalji Zahtjev:
 - Request Type: POST
 - Route: /api/fizicko/posalji-zahtjev
 - Format: JSON
@@ -150,25 +150,25 @@
 - Response: JSON
 
 ## ▶️ Logo: ◀️
-- (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
-- Sto bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
+- (Backend URL po defaultu je http://localhost:8080/){ime slike koju dobijete u zahtjevu za pravno lice.}
+- To bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
 
 ## 💣 Bugovi: 💣
-- Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
-- Account se moze napraviti na ne postojeci email. 
-- Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
-- Email za novi pasword nema nikakav design. 
-- Response message ne posjeduje slova š,đ,ž,č,ć. 
-- Vjerovatno ima dosta nekonzistentnog pisanja u responsu.
+- Logotipi koji su spašeni u storage-u se neće nikad obrisati.
+- Account se može napraviti na nepostojeći email.
+- Novi password neće raditi ukoliko je korisnik napravljen na nepostojećem emailu.
+- Email za novi password nema nikakav dizajn.
+- Response message ne posjeduje slova š, đ, ž, č, ć.
+- Vjerojatno ima dosta nekonzistentnog pisanja u responsu.
 
-## ❓ Nedovrseno ❓
+## ❓ Nedovršeno ❓
 ### 👉🏼 Route: 
 - Odgovori Zahtjevu.
 
 ### 👉🏼Logika
 - 👉🏼 Pravno Lice:
-- Historija Saradnji
+- Historija Saradnje
 - Klijenti
-- 👉🏼 Fizicko Lice
+- 👉🏼 Fizičko Lice:
 - Ponude
-- Historija Saradnji
+- Historija Saradnje
