@@ -1,13 +1,13 @@
 # 💯 Linker Backend Documentation 💯
 
-## ❗️ Vazno: ❗️ 
+## ❗️ Važno: ❗️ 
 - Ovo je prva verzija backenda pa je očekivano da će biti dosta BUGOVA, ukoliko naiđete na neki, prijavite mi na Slack i molim vas da budete strpljivi. :)
 - Ukoliko ima nekih nejasnoća s dokumentacijom, obratite mi se na Slack.
 - Dosta stvari sam promijenio u zadnji trenutak pa ako nešto bude pokvareno, prijavite mi na Slack.
 - Simbol * pored neke riječi "pretežno String" znači da je field obavezno popuniti.
 - Na Slacku ćete dobiti .env datoteku.
 
-## ▶️ Authorization ◀️
+## ▶️ Autorizacija ◀️
 - Kako ne bi mogao svatko poslati zahtjev i mijenjati podatke u našoj bazi podataka, postavio sam autorizacijski token koji se mora poslati s svakim zahtjevom.
 - U zaglavljima postavite token koji ćete dobiti na Slacku. Bez tog tokena dobit ćete grešku "Missing token."
 
