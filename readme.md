@@ -9,7 +9,7 @@
 
 ## ▶️ Autorizacija ◀️
 - Kako ne bi mogao svatko poslati zahtjev i mijenjati podatke u našoj bazi podataka, postavio sam autorizacijski token koji se mora poslati s svakim zahtjevom.
-- U zaglavljima postavite token koji ćete dobiti na Slacku. Bez tog tokena dobit ćete grešku "Missing token."
+- U headeru postavite token koji ćete dobiti na Slacku. Bez tog tokena dobit ćete grešku "Missing token."
 
 ## ▶️ Auth Requests ◀️
 ### 👉🏼 Registracija Fičickog Lica:
