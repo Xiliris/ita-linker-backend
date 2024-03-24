@@ -1,18 +1,18 @@
-# 💯 Linker Backend Documentation
+# 💯 Linker Backend Documentation 💯
 
-## ❗️ Vazno: 
+## ❗️ Vazno: ❗️ 
 - Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
 - Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.
 - Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
 - Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
 - Na slack cete dobit .env file
 
-## ▶️ Authorization
+## ▶️ Authorization ◀️
 - Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
 - u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
 
-## ▶️ Auth Requests
-### Registracija Fizickog Lica:
+## ▶️ Auth Requests ◀️
+### 👉🏼 Registracija Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/register-fizickog-lica
 - Format: JSON
@@ -26,7 +26,7 @@
 "password": "String*"
 ```
 
-### Registracija Pravnog Lica:
+### 👉🏼 Registracija Pravnog Lica:
 - Request Type: POST
 - Route: /api/auth/register-pravnog-lica
 - Format: FORM-- DATA
@@ -43,7 +43,7 @@
 "logotip": "File",
 ```
 
-### Login Fizickog Lica:
+### 👉🏼 Login Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/login-fizickog-lica
 - Format: JSON
@@ -53,7 +53,7 @@
 "password": "String*"
 ```
 
-### Login Pranvnog Lica:
+### 👉🏼 Login Pranvnog Lica:
 - Request Type: POST
 - Route: /api/auth/login-fizickog-lica
 - Format: JSON
@@ -64,7 +64,7 @@
 ```
 
 
-### Nova Lozinka Fizickog Lica:
+### 👉🏼 Nova Lozinka Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-novi-password
 - Format: JSON
@@ -73,7 +73,7 @@
 "email": "String* (Mora biti validan Email)"
 ```
 
-### Nova Lozinka Pranovg Lica:
+### 👉🏼 Nova Lozinka Pranovg Lica:
 - Request Type: POST
 - Route: /api/auth/pravno-lice-novi-password
 - Format: JSON
@@ -82,7 +82,7 @@
 "email": "String* (Mora biti validan Email)"
 ```
 
-### Promjena Lozinke Fizickog Lica:
+### 👉🏼 Promjena Lozinke Fizickog Lica:
 - Request Type: POST
 - Route: /api/auth/fizicko-lice-promjena-passworda
 - Format: JSON
@@ -93,7 +93,7 @@
 "newPassword": "String*"
 ```
 
-### Promjena Lozinke Pravnog Lica:
+### 👉🏼 Promjena Lozinke Pravnog Lica:
 - Request Type: POST
 - Route: /api/auth/pravno-lice-promjena-passworda
 - Format: JSON
@@ -104,23 +104,23 @@
 "newPassword": "String*"
 ```
 
-## ▶️ Requestovi za Fizicko Lice (KorisnickoIme fizickog lica):
-### Historija Saradnji:
+## ▶️ Requestovi za Fizicko Lice (KorisnickoIme fizickog lica): ◀️
+### 👉🏼 Historija Saradnji:
 - Request Type: GET
 - Route: /api/fizicko/historija-saradnji/{korisnickoIme}
 - Response: JSON
 
-### Ponude Poslova:
+### 👉🏼 Ponude Poslova:
 - Request Type: GET
 - Route: /api/fizicko/ponude-poslova/{korisnickoIme}
 - Response: JSON
 
-### Pristigle Ponude:
+### 👉🏼 Pristigle Ponude:
 - Request Type: GET
 - Route: /api/fizicko/pristigle-ponude/{korisnickoIme}
 - Response: JSON
 
-### Posalji Zahtjev:
+### 👉🏼 Posalji Zahtjev:
 - Request Type: POST
 - Route: /api/fizicko/posalji-zahtjev
 - Format: JSON
@@ -133,27 +133,27 @@
 "poruka": "String*"
 ```
 
-## ▶️ Requestovi za Pravno Lice (KorisnickoIme pravnog lica):
-### Historija Saradnje:
+## ▶️ Requestovi za Pravno Lice (KorisnickoIme pravnog lica): ◀️
+### 👉🏼 Historija Saradnje:
 - Request Type: GET
 - Route: /api/pravno/historija-saradnje/{korisnickoIme}
 - Response: JSON
 
-### Najprofitabilniji Klijenti:
+### 👉🏼 Najprofitabilniji Klijenti:
 - Reqeust Type: GET,
 - Route: /api/pravno/najprofitabilniji-klijenti/{korisnickoIme}
 - Response: JSON
 
-### Pristigli Zahtjevi:
+### 👉🏼 Pristigli Zahtjevi:
 - Request Type: GET
 - Route: /api/pravno/pristigli-zahtjevi/{korisnickoIme}
 - Response: JSON
 
-## ▶️ Logo:
+## ▶️ Logo: ◀️
 - (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
 - Sto bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
 
-## ▶️ Bugovi: 
+## ▶️ Bugovi: ◀️
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
 - Account se moze napraviti na ne postojeci email. 
 - Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
