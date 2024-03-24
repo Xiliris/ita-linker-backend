@@ -153,7 +153,7 @@
 - (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
 - Sto bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
 
-## ▶️ Bugovi: ◀️
+## 💣 Bugovi: 💣
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
 - Account se moze napraviti na ne postojeci email. 
 - Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
