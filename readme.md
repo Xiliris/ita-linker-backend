@@ -11,12 +11,12 @@
 - Format: JSON
 - data: {
 ```json
-ime: String*,
-prezime: String*,
-telefon: String*,
-email: String* (OVO MORA BITI JEDINSTVENO),
-korisnickoIme: String* (OVO MORA BITI JEDINSTVENO),
-password: String*
+"ime": "String*",
+"prezime": "String*",
+"telefon": "String*",
+"email": "String* (OVO MORA BITI JEDINSTVENO)",
+"korisnickoIme": "String* (OVO MORA BITI JEDINSTVENO)",
+"password": "String*""
 ```
 }
 
@@ -26,15 +26,15 @@ password: String*
 - Format: FORM-- DATA
 - data: {
 ```json
-ime: String,
-sjediste: String*,
-telefon: String*,
-IDBroj: String*,
-djelatnost: String*,
-email: String* (OVO MORA BITI JEDINSTVENO),
-korisnickoIme: String* (OVO MORA BITI JEDINSTVENO),
-password: String*,
-logotip: File,
+"ime": "String*",
+"sjediste": "String*",
+"telefon": "String*",
+"IDBroj": "String*",
+"djelatnost": "String*",
+"email": "String* (OVO MORA BITI JEDINSTVENO)",
+"korisnickoIme": "String* (OVO MORA BITI JEDINSTVENO)",
+"password": "String*",
+"logotip": "File",
 ```
 }
 
@@ -44,8 +44,8 @@ logotip: File,
 - Format: JSON
 - data: {
 ```json
-korisnickoIme: String*,
-password: String*
+"korisnickoIme": "String*",
+"password": "String*"
 ```
 }
 
@@ -55,8 +55,8 @@ password: String*
 - Format: JSON
 - data: {
 ```json
-korisnickoIme: String*,
-password: String*
+"korisnickoIme": "String*",
+"password": "String*"
 ```
 }
 
@@ -67,7 +67,7 @@ password: String*
 - Format: JSON
 - data: {
 ```json
-email: String* (Mora biti validan Email)
+"email": "String* (Mora biti validan Email)"
 ```
 }
 
@@ -77,7 +77,7 @@ email: String* (Mora biti validan Email)
 - Format: JSON
 - data: {
 ```json
-email: String* (Mora biti validan Email)
+"email": "String* (Mora biti validan Email)"
 ```
 }
 
@@ -87,9 +87,9 @@ email: String* (Mora biti validan Email)
 - Format: JSON
 - data: {
 ```json
-email: String*,
-oldPassword: String*,
-newPassword: String*
+"email": "String*",
+"oldPassword": "String*",
+"newPassword": "String*"
 ```
 }
 
@@ -99,9 +99,9 @@ newPassword: String*
 - Format: JSON
 - data: {
 ```json
-email: String*,
-oldPassword: String*,
-newPassword: String*
+"email": "String*",
+"oldPassword": "String*",
+"newPassword": "String*"
 ```
 }
 
@@ -127,11 +127,11 @@ newPassword: String*
 - Format: JSON
 - data: {
 ```json
-emailPravnogLica: String*,
-emailFizickoLica: String*,
-imeFizickogLica: String*,
-kontaktFizickogLica: String*,
-poruka: String*
+"emailPravnogLica": "String*",
+"emailFizickoLica": "String*",
+"imeFizickogLica": "String*",
+"kontaktFizickogLica": "String*",
+"poruka": "String*"
 ```
 }
 
