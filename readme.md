@@ -29,7 +29,7 @@
 ### 👉🏼 Registracija Pravnog Lica:
 - Request Type: POST
 - Route: /api/auth/register-pravnog-lica
-- Format: FORM-- DATA
+- Format: FORM-DATA
 - data: 
 ```json
 "ime": "String*",
