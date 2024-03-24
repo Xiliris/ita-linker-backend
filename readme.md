@@ -1,5 +1,12 @@
 # Linker Backend Documentation
 
+## ❗️ Vazno: 
+- Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
+- Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.
+- Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
+- Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
+- Na slack cete dobit .env file
+
 ## Authorization
 - Kako nebi mogao svako da posalje request i mijenja podatke u nasoj databazi postavio sam authorization token koji se mora postaviti na svaki request.
 - u headers postavite token koji cete dobiti na slacku. bez tog tokena dobit cete error "Missing token."
@@ -146,14 +153,7 @@
 - (backend url default je http://localhost:8080/)/{ime slike koju dobijate u requestu za pravno lice.}
 - Sto bi otprilike izgledalo ovako: http://localhost:8080/1711117689880mascot-logo-design_fb-img_1200x800.jpg/
 
-## Vazno: 
-- Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
-- Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.
-- Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
-- Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
-- Na slack cete dobit .env file
-
-## Bugovi: 
+## ❗️ Bugovi: 
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
 - Account se moze napraviti na ne postojeci email. 
 - Novi password nece raditi ukoliko je korisnik napravljen na ne postojecem emailu. 
