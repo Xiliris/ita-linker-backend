@@ -1,0 +1,11 @@
+Route: 
+    Odgovori Zahtjevu.
+
+Logika
+    Pravno Lice:
+        Historija Saradnji
+        Klijenti
+
+    Fizicko Lice
+        Ponude
+        Historija Saradnji
