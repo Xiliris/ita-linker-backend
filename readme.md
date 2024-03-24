@@ -16,7 +16,7 @@
 "telefon": "String*",
 "email": "String* (OVO MORA BITI JEDINSTVENO)",
 "korisnickoIme": "String* (OVO MORA BITI JEDINSTVENO)",
-"password": "String*""
+"password": "String*"
 ```
 }
 
@@ -156,8 +156,9 @@
 
 ## Vazno: 
 - Ovo je prva verzija backenda pa je ocekivano da ce biti dosta BUGOVA, ukoliko naidete na neki prijavite mi na slack i molim vas da budete strpljivi. :) 
-- Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.e 
+- Ukoliko ima nekih nejasnoca sa dokumentacijom obratite mi se na slack.
 - Dosta stvari sam promjenuo sto se kaze zadnju sekundu pa ako nesto bude pokvareno prijavite mi na slack.
+- Simbol * pored neke rijeci "pretezno String" znaci da je field obazeno popuniti.
 
 ## Bugovi: 
 - Logotipi koji su spaseni u storage-u se nece obrisati nikad. 
