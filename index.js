@@ -7,6 +7,7 @@ const cors = require("cors");
 const fs = require("fs");
 const database = require("./database");
 const authorization = require("./middleware/authorization");
+const User = require('./schemas/pravnoLiceSchema');
 
 const PORT = process.env.PORT;
 
@@ -16,6 +17,95 @@ app.use(express.static(path.join(__dirname, "storage")));
 
 app.get("/", (req, res) => {
   res.send("WORKING");
+});
+
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/register-pravnog-lica", async (req, res) => {
+  try {
+    const { ime, sjediste, telefon, IDBroj, djelatnost, email, korisnickoIme, password, logotip } = req.body;
+    const user = new User({ ime, sjediste, telefon, IDBroj, djelatnost, email, korisnickoIme, password, logotip });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/register-fizickog-lica", async (req, res) => {
+  try {
+    const { ime, prezime, telefon, email, korisnickoIme, password } = req.body;
+    const user = new User({ ime, prezime, telefon, email, korisnickoIme, password });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/login-fizickog-lica", async (req, res) => {
+  try {
+    const { korisnickoIme, password } = req.body;
+    const user = new User({ korisnickoIme, password });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/login-pravnog-lica", async (req, res) => {
+  try {
+    const { korisnickoIme, password } = req.body;
+    const user = new User({ korisnickoIme, password });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/pravno-lice-promjena-passworda", async (req, res) => {
+  try {
+    const { oldPassword, newPassword } = req.body;
+    const user = new User({ oldPassword, newPassword });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/pravno-lice-novi-password", async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = new User({ email });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/fizicko-lice-promjena-passworda", async (req, res) => {
+  try {
+    const { oldPassword, newPassword } = req.body;
+    const user = new User({ oldPassword, newPassword });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
+});
+
+app.post("mongodb+srv://Application:oN2ctZ0iGBxAOVSW@cluster0.7bzas.mongodb.net/ITA-Backed?retryWrites=true&w=majority&appName=Cluster0/api/auth/fizicko-lice-novi-password", async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = new User({ email });
+    await user.save();
+    setResponseMessage(response.data.message);
+  } catch (error) {
+    setResponseMessage(error.response.data.message);
+  }
 });
 
 const readRoutes = (dir) => {
@@ -36,6 +126,12 @@ const readRoutes = (dir) => {
     }
   }
 };
+
+app.use(bodyParser.json());
+
+
+
+
 
 readRoutes("routes");
 database();

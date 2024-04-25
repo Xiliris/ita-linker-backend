@@ -8,7 +8,8 @@ const requiredFields = ["email"];
 
 router.post("/", async (req, res) => {
   const { email } = req.body;
-
+  const data = req.body;
+  
   const missingField = requiredFields.find((field) => !data[field]);
 
   if (missingField) {
