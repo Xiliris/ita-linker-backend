@@ -38,6 +38,8 @@ router.post("/", upload.single("logotip"), async (req, res) => {
       .json({ error: "Content-Type mora biti multipart/form-data" });
   }
 
+  console.log(req.body);
+
   const missingField = requiredFields.find((field) => !req.body[field]);
 
   if (missingField) {
@@ -66,7 +68,7 @@ router.post("/", upload.single("logotip"), async (req, res) => {
 
     return res.status(200).json({ message: "Korisnik uspjesno kreiran." });
   } catch (err) {
-    res.send(500).json({ message: err });
+    res.status(500).json({ message: err });
   }
 });
 
