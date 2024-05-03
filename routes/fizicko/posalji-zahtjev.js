@@ -20,8 +20,10 @@ router.post("/", async (req, res) => {
       .json({ message: `${missingField} nije ispravno unesen.` });
   }
 
+  const date = new Date();
+
   const messageFormat = {
-    datum: new Date(),
+    datum: `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`,
     emailFizickoLica: data.emailFizickoLica,
     imeFizickogLica: data.imeFizickogLica,
     kontaktFizickogLica: data.kontaktFizickogLica,
