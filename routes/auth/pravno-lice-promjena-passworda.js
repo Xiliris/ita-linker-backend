@@ -7,7 +7,7 @@ const requiredFields = ["email", "oldPassword", "newPassword"];
 router.post("/", async (req, res) => {
   const { email, oldPassword, newPassword } = req.body;
 
-  const missingField = requiredFields.find((field) => !data[field]);
+  const missingField = requiredFields.find((field) => !req.body[field]);
 
   if (missingField) {
     return res
