@@ -18,6 +18,11 @@ app.get("/", (req, res) => {
   res.send("WORKING");
 });
 
+const ponudePoslova = require("./routes/fizicko/ponude-poslova");
+
+app.use("/api/fizicko/ponude-poslova", ponudePoslova);
+
+/*
 const readRoutes = (dir) => {
   const files = fs.readdirSync(path.join(__dirname, dir));
   for (const file of files) {
@@ -38,6 +43,7 @@ const readRoutes = (dir) => {
 };
 
 readRoutes("routes");
+*/
 database();
 
 app.use("*", (req, res) => {
