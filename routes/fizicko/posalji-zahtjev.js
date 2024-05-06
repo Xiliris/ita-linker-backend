@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
   const date = new Date();
 
   const messageFormat = {
-    datum: `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`,
+    datum: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
     emailFizickoLica: data.emailFizickoLica,
     imeFizickogLica: data.imeFizickogLica,
     kontaktFizickogLica: data.kontaktFizickogLica,
