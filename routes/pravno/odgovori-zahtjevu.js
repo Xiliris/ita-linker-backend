@@ -36,7 +36,7 @@ router.post("/", async (req, res) => {
       {
         $push: {
           ponude: {
-            date: `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`,
+            date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
             imePravnogLica,
             telefon,
             cijena,
